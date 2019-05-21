@@ -1,4 +1,4 @@
-package com.zk.offer66;
+package com.zk.offer66.from11to20;
 
 import java.util.Arrays;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，
  * 并保证奇数和奇数，偶数和偶数之间的相对位置不变。
  */
-public class Reorder {
+public class Q13Reorder {
     /**
      * 思路：从开始依次查找每个偶a，并从该偶数开始找到一个奇数b，
      * 然后从该奇数a开始截止b 该a前面数字依次向后移动一位，原本偶数a的位置赋值为b
@@ -44,7 +44,7 @@ public class Reorder {
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,7};
-        Reorder.reOrderArray(nums);
+        Q13Reorder.reOrderArray(nums);
         System.out.println(Arrays.toString(nums));
     }
 }

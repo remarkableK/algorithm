@@ -2,24 +2,29 @@ package com.zk.offer66;
 
 /**
  * 链表节点
+ *
  * @author
  */
-public class ListNode{
-        int val;
-        public ListNode next = null;
+public class ListNode {
+    public int val;
+    public ListNode next = null;
 
-        ListNode(int val) {
-            this.val = val;
+    public ListNode(int val) {
+        this.val = val;
+    }
+
+
+
+    public ListNode(int[] values) {
+        this.val = values[0];
+        ListNode arrow = this;
+        for (int i = 1; i < values.length; i++) {
+            ListNode t = new ListNode(values[i]);
+            arrow.next = t;
+            arrow = arrow.next;
         }
-        public ListNode(int[] values){
-            this.val = values[0];
-            ListNode arrow = this;
-            for (int i = 1; i < values.length; i++) {
-                ListNode t = new ListNode(values[i]);
-                arrow.next = t;
-                arrow = arrow.next;
-            }
-        }
+    }
+
     @Override
     public String toString() {
         ListNode listNode = this;
